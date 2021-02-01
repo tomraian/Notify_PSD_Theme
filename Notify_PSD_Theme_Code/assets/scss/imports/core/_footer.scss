@@ -1,0 +1,90 @@
+footer{
+    .footer__top{
+        padding: 6rem 0;
+        .testimonials{
+            &__header{
+                font-size: 1.8rem;
+                color: $text-color;
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                font-style: italic;
+                line-height: 2.8rem;
+                margin-bottom: 3rem;
+            }
+            &__author{
+                text-align: center;
+                font-size: 1.8rem;
+                font-family: 'Raleway';
+                font-weight: bold;
+                color: #2e2e2e;
+                margin-bottom: 3rem;
+            }
+            &__people{
+                display: flex;
+                margin-bottom: 6rem;
+                &--img{
+                    // margin: 0 3px;
+                    cursor: pointer;
+                    position: relative;
+                    &-overlay{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $primary-color;
+                        display: none;
+                    }
+                    &:hover .testimonials__people--img-overlay{
+                        display: block;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+        .get-in-touch{
+            text-align: center;
+            &__header{
+                font-size: 2.4rem;
+                font-family: 'Raleway';
+                font-weight: 500;
+                margin-bottom: 3rem;
+            }
+            &__content{
+                font-size: 1.6rem;
+                color: $text-color;
+                margin-bottom: 3rem;
+            }
+            & .social{
+                @include dflex-center;
+                &__item{
+                    background-image: url('../../../../assets/images/social/social__background.png');
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 50%;
+                    @include dflex-center;
+                    margin: 0 0.5rem;
+                    &:hover{
+                        background-color: $primary-color;
+                        background-image: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        background-color: $background-color;
+        padding: 6rem 0;
+        & ul{
+            @include dflex-center;
+            & li a{
+                margin: 0 2rem;
+                font-size: 1.6rem;
+                color: $text-color;
+            }
+        }
+    }
+    
+}
